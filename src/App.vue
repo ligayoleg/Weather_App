@@ -1,10 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link tag="a" to="/">Home</router-link>
-      <router-link tag="a" to="/showWeather"> Show Weather</router-link>
-      <router-link tag="a" to="/about">About</router-link>
-      <router-link tag="a" to="/contact">Contact</router-link>
+      <router-link tag="a" to="/showWeather" class="ui button olive">
+        Show Weather</router-link
+      >
+      <router-link tag="a" to="/about" class="ui button olive"
+        >About</router-link
+      >
+      <router-link tag="a" to="/contact" class="ui button olive"
+        >Contact</router-link
+      >
     </div>
 
     <router-view />
@@ -34,8 +39,7 @@ export default {
 
 #nav a {
   margin: 3px;
-  padding: 5px 10px;
-  border: 1px solid #333;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 </style>
