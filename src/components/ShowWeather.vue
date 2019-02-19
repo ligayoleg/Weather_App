@@ -3,20 +3,7 @@
     <div id="weather">
       <h1 id="description">{{ description }}</h1>
       <h1 id="temp">{{ temp }}</h1>
-      <button
-        id="cel-button"
-        class="ui button green"
-        v-on:click="changeTemp(temp);"
-      >
-        C
-      </button>
-      <button
-        id="faren-button"
-        class="ui button blue"
-        v-on:click="changeTemp(temp);"
-      >
-        F
-      </button>
+
       <h3 id="location">{{ location }} {{ country }}</h3>
     </div>
     <div id="zip">
@@ -74,12 +61,6 @@ export default {
           // (K − 273.15) × 9/5 + 32 = °F
           this.temp = (((data.main.temp - 273.15) * 9) / 5 + 32).toFixed();
         });
-    },
-    changeTemp: temp => {
-      var status = true;
-      if (status) {
-      }
-      console.log(temp);
     }
   }
 };
