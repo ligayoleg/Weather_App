@@ -20,4 +20,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#about-info {
+  margin: 10px 15px;
+}
+</style>
