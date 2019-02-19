@@ -49,18 +49,23 @@ export default {
     fetchData: function(zip) {
       //console.log("fetched!");
       const appid = "8bd333d4762ef5d6f7d19be0325fc401";
-      fetch(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${appid}`
-      )
-        .then(response => response.json())
-        .then(data => {
-          // Here's a list of repos!
-          this.location = data.name;
-          this.country = data.sys.country;
-          this.description = data.weather[0].description.toUpperCase();
-          // (K − 273.15) × 9/5 + 32 = °F
-          this.temp = (((data.main.temp - 273.15) * 9) / 5 + 32).toFixed();
-        });
+      if (zip.length === 5) {
+        fetch(
+          `https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${appid}`
+        )
+          .then(response => response.json())
+          .then(data => {
+            // Here's a list of repos!
+            this.location = data.name;
+            this.country = data.sys.country;
+            this.description = data.weather[0].description.toUpperCase();
+            // (K − 273.15) × 9/5 + 32 = °F
+            this.temp = (((data.main.temp - 273.15) * 9) / 5 + 32).toFixed();
+          });
+      } else {
+        alert("Enter proper Zip code!");
+        zip = "";
+      }
     }
   }
 };
