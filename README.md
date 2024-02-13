@@ -1,11 +1,11 @@
 # Weather App
 
-## by Oleg Ligay
+### Description
 
 Weather App shows you a weather of eligible US zip code.
 
 ### Technology used:
 
-- Vue.js
+- Angular v
 - Semantic UI
 - OpenWeather API
