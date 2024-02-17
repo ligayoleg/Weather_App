@@ -1,0 +1,16 @@
+<div class="container mt-1">
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item" *ngFor="let link of navLinks">
+              <a [class]="link.class" [href]="link.url">{{ link.label }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body"></div>
+      </div>
+    </div>
+  </div>
+</div>
